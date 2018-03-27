@@ -1,0 +1,20 @@
+
+{{#unless articles}}
+    <div id="no_articles"> You don't have any saved articles </div>
+{{/unless}}
+
+{{#if articles}}
+    {{#each articles}}
+        <div class="article">
+            <h2 class="{{this._id}}"><a href="{{this.link}}" class="{{this._id}}">{{this.header}}</a></h2>
+            <p class="{{this._id}}">{{this.summary}}</p>
+            <button class="create-note {{this._id}}"> Create note </button>
+            <button class="delete" type="submit" id="{{this._id}}"> Delete article </button>
+            <div class="create-note">
+                    <textarea type="text" name="note" id="note" class="form-control" placeholder="New Note">
+                    <button class="delete" id="{{this._id}}"> Delete article </button>
+            </div>
+        </div>
+    {{/each}}
+{{/if}}
+

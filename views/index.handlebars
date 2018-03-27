@@ -1,0 +1,9 @@
+{{#if articles}}
+    {{#each articles}}
+        <div class="article">
+            <h2 class="{{this.temporaryId}}"><a href="{{this.link}}" class="{{this.temporaryId}}">{{this.headline}}</a></h2>
+            <p class="{{this.temporaryId}}">{{this.summary}}</p>
+            <button class="save" id="{{this.temporaryId}}"> Save article </button>
+        </div>
+    {{/each}}
+{{/if}}
